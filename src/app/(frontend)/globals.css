@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Tenor+Sans&display=swap');
+
 @layer base {
   h1,
   h2,
@@ -9,76 +11,111 @@
   h4,
   h5,
   h6 {
-    font-size: unset;
-    font-weight: unset;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.03em;
+  }
+
+  body {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    font-weight: 300;
+  }
+
+  button, input, select {
+    font-weight: 300;
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: -0.03em;
+  }
+
+  .font-body {
+    font-family: 'Tenor Sans', sans-serif;
+    font-weight: 300;
+  }
+
+  .font-accent {
+    font-family: 'Marcellus', serif;
+    font-weight: 300;
+  }
+
+  /* Override any bold text */
+  strong, b, .font-bold, .font-semibold, .font-medium {
+    font-weight: 300 !important;
   }
 
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 36 33% 97%;
+    --foreground: 30 9% 22%;
 
-    --card: 240 5% 96%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 35 29% 95%;
+    --card-foreground: 30 9% 22%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 33% 97%;
+    --popover-foreground: 30 9% 22%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 14 56% 40%;
+    --primary-foreground: 35 29% 95%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 33 38% 88%;
+    --secondary-foreground: 14 56% 40%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 33 38% 88%;
+    --muted-foreground: 30 9% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 22 43% 75%;
+    --accent-foreground: 30 9% 22%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 35 29% 95%;
 
-    --border: 240 6% 80%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 15% 85%;
+    --input: 33 38% 88%;
+    --ring: 14 56% 40%;
 
-    --radius: 0.2rem;
+    --radius: 0.5rem;
 
-    --success: 196 52% 74%;
+    --success: 142 52% 74%;
     --warning: 34 89% 85%;
     --error: 10 100% 86%;
   }
 
   [data-theme='dark'] {
-    --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
+    --background: 30 9% 11%;
+    --foreground: 35 29% 95%;
 
-    --card: 0 0% 4%;
-    --card-foreground: 210 40% 98%;
+    --card: 30 9% 13%;
+    --card-foreground: 35 29% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 30 9% 11%;
+    --popover-foreground: 35 29% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 14 56% 60%;
+    --primary-foreground: 35 29% 95%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 30 9% 20%;
+    --secondary-foreground: 35 29% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 30 9% 20%;
+    --muted-foreground: 35 29% 75%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 22 43% 35%;
+    --accent-foreground: 35 29% 95%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 35 29% 95%;
 
-    --border: 0, 0%, 15%, 0.8;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 30 9% 25%;
+    --input: 30 9% 20%;
+    --ring: 14 56% 60%;
 
-    --success: 196 100% 14%;
+    --success: 142 52% 25%;
     --warning: 34 51% 25%;
     --error: 10 39% 43%;
   }

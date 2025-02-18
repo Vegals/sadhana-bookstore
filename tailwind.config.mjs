@@ -95,7 +95,9 @@ const config = {
       },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
-        sans: ['var(--font-geist-sans)'],
+        sans: ['Tenor Sans', 'sans-serif'],
+        display: ['Italiana', 'serif'],
+        accent: ['Marcellus', 'serif'],
       },
       keyframes: {
         'accordion-down': {
@@ -114,8 +116,21 @@ const config = {
               '--tw-prose-body': 'var(--text)',
               '--tw-prose-headings': 'var(--text)',
               h1: {
-                fontWeight: 'normal',
+                fontFamily: 'Cormorant Garamond, serif',
+                fontWeight: '500',
                 marginBottom: '0.25em',
+              },
+              h2: {
+                fontFamily: 'Cormorant Garamond, serif',
+                fontWeight: '500',
+              },
+              h3: {
+                fontFamily: 'Cormorant Garamond, serif',
+                fontWeight: '500',
+              },
+              h4: {
+                fontFamily: 'Cormorant Garamond, serif',
+                fontWeight: '500',
               },
             },
           ],
@@ -128,7 +143,7 @@ const config = {
               },
               h2: {
                 fontSize: '1.25rem',
-                fontWeight: 600,
+                fontWeight: 500,
               },
             },
           ],

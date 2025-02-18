@@ -1,6 +1,7 @@
 'use client'
 
 import type { PayloadAdminBarProps, PayloadMeUser } from 'payload-admin-bar'
+import type { User } from '@/payload-types'
 
 import { cn } from '@/utilities/ui'
 import { useSelectedLayoutSegments } from 'next/navigation'
@@ -42,17 +43,15 @@ export const AdminBar: React.FC<{
   ) as keyof typeof collectionLabels
   const router = useRouter()
 
-  const onAuthChange = React.useCallback((user: PayloadMeUser) => {
-    setShow(Boolean(user?.id))
+  const onAuthChange = React.useCallback((user: PayloadMeUser | null) => {
+    const typedUser = user as User | null
+    setShow(Boolean(typedUser?.id && typedUser?.role === 'admin'))
   }, [])
 
+  if (!show) return null
+
   return (
-    <div
-      className={cn(baseClass, 'py-2 bg-black text-white', {
-        block: show,
-        hidden: !show,
-      })}
-    >
+    <div className={cn(baseClass, 'py-2 bg-black text-white')}>
       <div className="container">
         <PayloadAdminBar
           {...adminBarProps}
